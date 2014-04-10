@@ -4,7 +4,6 @@ class CreateImages < ActiveRecord::Migration
       t.string :path
       t.integer :up
       t.integer :down
-
       t.timestamps
     end
   end
