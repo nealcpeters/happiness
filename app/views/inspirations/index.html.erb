@@ -1,3 +1,7 @@
-<% @inspirations.each do |inspir| %>
-  <p><%= inspir.content %> <a href="/inspirations/<%= inspir.id %>/up">up</a> | <a href="inspirations/<%= inspir.id %>/down">down</a></p>
-<% end %> 
+<div class="text_container">
+
+  <% @inspirations.each do |inspir| %>
+    <p><%= inspir.content %> <a href="/inspirations/<%= inspir.id %>/up">up</a> | <%= inspir.vote_score %> | <a href="inspirations/<%= inspir.id %>/down">down</a></p> 
+  <% end %> 
+
+</div>
