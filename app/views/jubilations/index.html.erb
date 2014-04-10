@@ -1,3 +1,5 @@
-<% @jubilations.each do |jubilee| %>
-  <p><%= jubilee.content %> <a href="/jubilations/<%= jubilee.id %>/up">up</a> | <a href="jubilations/<%= jubilee.id %>/down">down</a></p>
-<% end %> 
+<div class="text_container">
+  <% @jubilations.each do |jubilee| %>
+    <p><%= jubilee.content %> <a href="/jubilations/<%= jubilee.id %>/up">up</a> | <%= jubilee.vote_score %> | <a href="jubilations/<%= jubilee.id %>/down">down</a></p>
+  <% end %> 
+</div>
