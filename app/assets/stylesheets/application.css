@@ -58,6 +58,8 @@ img {
 	margin: 2em auto;
 	/*border: 1px solid black;*/
 	padding: .5em;
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px;
 }
 
 .text_container a{
