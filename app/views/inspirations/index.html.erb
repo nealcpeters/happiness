@@ -1,3 +1,3 @@
 <% @inspirations.each do |inspir| %>
-  <p><%= inspir.content %></p>
+  <p><%= inspir.content %> <a href="/inspirations/<%= inspir.id %>/up">up</a> | <a href="inspirations/<%= inspir.id %>/down">down</a></p>
 <% end %> 

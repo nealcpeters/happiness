@@ -1,7 +1,7 @@
 class InspirationsController < ApplicationController
 
   def index
-    @inspirations = Inspiration.all.sort{|inspir| inspirations.vote_score}
+    @inspirations = Inspiration.all.sort_by{|inspir| -inspir.vote_score}
   end
 
   def up
