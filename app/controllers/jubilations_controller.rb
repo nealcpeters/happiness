@@ -1,7 +1,7 @@
 class JubilationsController < ApplicationController
 
   def index
-    @jubilations = Jubilation.all.sort{|jubilee| jubilee.vote_score}
+    @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
   end
 
   def up
@@ -12,8 +12,8 @@ class JubilationsController < ApplicationController
 
   def down
     jubilee = Jubilation.find(params[:id])
-    jubilee.update_attributes(up: jubilee.up - 1)
-    redirect_to :index
+    jubilee.update_attributes(down: jubilee.down + 1)
+    redirect_to jubilations_path
   end
 
 end
