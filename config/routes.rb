@@ -4,9 +4,11 @@ Happiness::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'images#index'
-  get '/inspirations', to: 'inspirations#index'
-  get '/jubilations', to: 'jubilations#index'
-  
+  get '/inspirations', to: 'inspirations#index', as: "inspirations"
+  get '/jubilations', to: 'jubilations#index', as: "jubilations"
+  get '/jubilations/:id/up', to: 'jubilations#up'
+  get '/jubilations/:id/down', to: 'jubilations#down'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
