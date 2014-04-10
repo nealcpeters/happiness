@@ -14,3 +14,11 @@ Image.create(path: "http://s3-ec.buzzfed.com/static/enhanced/webdr02/2013/3/12/1
 Image.create(path: "http://s3-ec.buzzfed.com/static/enhanced/webdr02/2013/3/12/17/anigif_enhanced-buzz-1934-1363122302-1.gif")
 Image.create(path: "http://smileplez.s3.amazonaws.com/images/2013/August/10/5206e2d8d37b8.jpg")
 Image.create(path: "http://i.imgur.com/l9JA8.gif")
+
+Inspiration.create(content: "Just remember, even Terminators have to sleep")
+Inspiration.create(content: "Choo Choo all over the place!")
+Inspiration.create(content: "Let it Bleed")
+
+Jubilation.create(content: "I just got a job!")
+Jubilation.create(content: "My project got picked!")
+Jubilation.create(content: "I beat Dustin in a debate!")
