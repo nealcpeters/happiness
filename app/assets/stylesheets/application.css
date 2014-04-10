@@ -52,14 +52,42 @@ img {
 }
 
 .text_container {
+	/*background-color: black;*/
+	/*color: white;*/
 	width:50%;
 	margin: 2em auto;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	padding: .5em;
+}
+
+.text_container a{
+	color: black;
+}
+
+.text_container a:hover{
+	color: lightblue;
 }
 
 .text_container p{
 	font-size: 115%;
-	padding:.2em;
+	display: inline-block;
 }
 
+.text_container p span{
+	font-size: 80%;
+	display: inline-block;
+}
+
+.arrows {
+	font-size: 75%;
+}
+
+.up {
+	padding-top: .5em;
+}
+
+.down {
+	padding-bottom: .5em;
+	width: 50%;
+	border-bottom: 1px solid black;
+}
