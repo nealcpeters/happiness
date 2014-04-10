@@ -93,3 +93,28 @@ img {
 	padding-bottom: .5em;
 	border-bottom: 1px solid black;
 }
+
+.down {
+	padding-bottom: .5em;
+	width: 50%;
+}
+
+.image_arrows {
+	display: inline-block;
+}
+
+.image_container {
+	display: inline-block;
+	margin: 0;
+	text-align: center;
+}
+
+.super_container {
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;	
+}
+
+.lesser_container {
+	margin: 0 auto;
+}
