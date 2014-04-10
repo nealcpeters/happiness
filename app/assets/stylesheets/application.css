@@ -13,6 +13,8 @@ body {
 	font-family: 'Amatic SC', cursive;
 	font-size: 7em;
 	margin: 0;
+	clear: both;
+	margin-bottom: 15px;
 }
 
 img {
@@ -33,8 +35,16 @@ img {
 	font-size: 28px;
 }
 
-.nav-right {
-	display: inline;
+.nav-link {
+	color: white;
+	text-decoration: none;
+	font-family: 'Amatic SC', cursive;
+	font-size: 28px;	
+	padding-right: 15px;
+}
+
+.nav-links {
+	display: inline-flex;
 	font-family: 'Amatic SC', cursive;
 	font-size: 28px;
 	float: right;
