@@ -1,7 +1,20 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 <div class="text_container">
 
   <% @inspirations.each do |inspir| %>
-    <p><%= inspir.content %> <a href="/inspirations/<%= inspir.id %>/up">up</a> | <%= inspir.vote_score %> | <a href="inspirations/<%= inspir.id %>/down">down</a></p> 
+    
+    <div>      
+      <div class="arrows up">
+        <a href="/inspirations/<%= inspir.id %>/up"><i class="fa fa-arrow-up"></i></a>
+      </div>
+      <% votes = inspir.vote_score %>
+      <% votes = " #{inspir.vote_score}" if inspir.vote_score.to_s.length == 1 %>
+      <p><span><%= votes %></span> &nbsp &nbsp <%= inspir.content %> </p>
+      <div class="arrows down">
+        <a href="inspirations/<%= inspir.id %>/down"><i class="fa fa-arrow-down "></i></a>
+      </div>
+    </div>
   <% end %> 
 
 </div>

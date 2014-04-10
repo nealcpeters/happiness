@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
 	def index
-		@image_path = Image.all.sample.path
+		@image = Image.all.sample
 	end
 
   def up

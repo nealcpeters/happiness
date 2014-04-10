@@ -1,3 +1,26 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
 <h1 class="title">Don't worry, be happy</h1>
 
-<%= image_tag(@image_path) %>
+<div class="super_container">      
+  
+  <% votes = @image.vote_score %>
+  <% votes = " #{@image.vote_score}" if @image.vote_score.to_s.length == 1 %>
+  <div class="lesser_container">
+    <div class="image_arrows">
+      <div class="arrows up">
+        <a href="/images/<%= @image.id %>/up"><i class="fa fa-arrow-up"></i></a>
+      </div>
+      <p><%= votes %> </p>
+      <div class="arrows image_down">
+        <a href="images/<%= @image.id %>/down"><i class="fa fa-arrow-down "></i></a>
+      </div>
+    </div>
+
+
+    <div class="image_container">
+      <%= image_tag(@image.path) %>
+    </div>
+  </div>
+</div>
+
