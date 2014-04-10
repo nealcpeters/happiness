@@ -60,6 +60,7 @@ img {
 	padding: .5em;
 	font-family: 'Amatic SC', cursive;
 	font-size: 30px;
+	margin-top: 10px;
 }
 
 .text_container a{
@@ -90,6 +91,5 @@ img {
 
 .down {
 	padding-bottom: .5em;
-	width: 50%;
 	border-bottom: 1px solid black;
 }
