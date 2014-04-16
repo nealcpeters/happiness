@@ -9,10 +9,12 @@ Happiness::Application.routes.draw do
   get '/images/:id/down', to: 'images#down'
 
   get '/inspirations', to: 'inspirations#index', as: "inspirations"
+  post '/inspirations', to: 'inspirations#create', as: "inspirations_create"
   get '/inspirations/:id/up', to: 'inspirations#up'
   get '/inspirations/:id/down', to: 'inspirations#down'
 
   get '/jubilations', to: 'jubilations#index', as: "jubilations"
+  post '/jubilations', to: 'jubilations#create', as: "jubilations_create"
   get '/jubilations/:id/up', to: 'jubilations#up'
   get '/jubilations/:id/down', to: 'jubilations#down'
 
