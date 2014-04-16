@@ -24,14 +24,6 @@ ActiveRecord::Schema.define(version: 20140416021025) do
     t.datetime "updated_at"
   end
 
-  create_table "inspirations", force: true do |t|
-    t.string   "content"
-    t.integer  "up",         default: 0
-    t.integer  "down",       default: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "jubilations", force: true do |t|
     t.string   "content"
     t.integer  "up",         default: 0

@@ -1,6 +1,8 @@
 class ImagesController < ApplicationController
 	def index
 		@image = Image.all.sample
+    @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+
 	end
 
   def create
