@@ -1,4 +1,9 @@
 <div class="text_container">
+  
+  <%= form_for Inspiration.create do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
 
   <% @inspirations.each do |inspir| %>
     

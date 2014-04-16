@@ -1,4 +1,10 @@
 <div class="text_container">
+
+  <%= form_for Jubilation.create do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+  <% end %>
+
   <% @jubilations.each do |jubilee| %>
     <div>      
       <div class="arrows up">
