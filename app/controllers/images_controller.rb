@@ -10,6 +10,7 @@ class ImagesController < ApplicationController
 
   def up
     upvote = Image.find(params[:id])
+    Vote.create(votable_id: upvote.id, votable_type: "image", ip_address: request.remote_ip)
     upvote.update_attributes(up: upvote.up + 1)
     redirect_to root_path
   end
