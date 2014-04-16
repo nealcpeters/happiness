@@ -18,24 +18,24 @@ ActiveRecord::Schema.define(version: 20140410013945) do
 
   create_table "images", force: true do |t|
     t.string   "path"
-    t.integer  "up"
-    t.integer  "down"
+    t.integer  "up",         default: 0
+    t.integer  "down",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "inspirations", force: true do |t|
     t.string   "content"
-    t.integer  "up"
-    t.integer  "down"
+    t.integer  "up",         default: 0
+    t.integer  "down",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "jubilations", force: true do |t|
     t.string   "content"
-    t.integer  "up"
-    t.integer  "down"
+    t.integer  "up",         default: 0
+    t.integer  "down",       default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
