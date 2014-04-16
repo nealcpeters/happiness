@@ -6,8 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }], up: 0, down: 0)
 #   Mayor.create(name: 'Emanuel', city: cities.first, up: 0, down: 0)
 
-
-
 Image.create(path: "http://s3-ak.buzzfeed.com/static/enhanced/terminal01/2011/9/30/12/enhanced-buzz-19887-1317398816-9.jpg", up: 0, down: 0)
 Image.create(path: "http://s3-ak.buzzfeed.com/static/enhanced/terminal01/2011/9/30/14/enhanced-buzz-19891-1317409057-7.jpg", up: 0, down: 0)
 Image.create(path: "http://s3-ak.buzzfeed.com/static/enhanced/terminal01/2011/9/30/15/enhanced-buzz-19889-1317412032-12.jpg", up: 0, down: 0)
