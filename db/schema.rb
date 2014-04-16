@@ -41,6 +41,11 @@ ActiveRecord::Schema.define(version: 20140416021025) do
   end
 
   create_table "votes", force: true do |t|
+    t.string   "votable_id"
+    t.string   "votable_type"
+    t.string   "ip_address",   limit: 15
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
