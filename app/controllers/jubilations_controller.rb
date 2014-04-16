@@ -11,7 +11,7 @@ class JubilationsController < ApplicationController
 
   def up
     jubilee = Jubilation.find(params[:id])
-    new_vote = Vote.new(votable_id: upvote.id, votable_type: "image", ip_address: request.remote_ip)
+    new_vote = Vote.new(votable_id: jubilee.id, votable_type: "jubilation", ip_address: request.remote_ip)
     if new_vote.save
       jubilee.update_attributes(up: jubilee.up + 1)
     end
@@ -20,7 +20,10 @@ class JubilationsController < ApplicationController
 
   def down
     jubilee = Jubilation.find(params[:id])
-    jubilee.update_attributes(down: jubilee.down + 1)
+    new_vote = Vote.new(votable_id: jubilee.id, votable_type: "jubilation", ip_address: request.remote_ip)
+    if new_vote.save
+      jubilee.update_attributes(up: jubilee.down + 1)
+    end
     redirect_to jubilations_path
   end
 
