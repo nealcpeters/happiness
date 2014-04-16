@@ -1,10 +1,31 @@
-<h1 class="title">Don't worry, be happy</h1>
+<h1 class="title">Smiles - Get you some.</h1>
 
 <div class="super_container">      
-  
-  <% votes = @image.vote_score %>
-  <% votes = "#{@image.vote_score}" if @image.vote_score.to_s.length == 1 %>
+  <div class="text_container">
+
+  <%= form_for Jubilation.create do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit class: "button"%>
+  <% end %>
+
+  <% @jubilations.each do |jubilee| %>
+    <div>      
+      <div class="arrows up">
+        <a href="/jubilations/<%= jubilee.id %>/up"><i class="fa fa-arrow-up"></i></a>
+      </div>
+      <% votes = jubilee.vote_score %>
+      <% votes = " #{jubilee.vote_score}" if jubilee.vote_score.to_s.length == 1 %>
+      <p><span><%= votes %></span> &nbsp &nbsp <%= jubilee.content %> </p>
+      <div class="arrows down">
+        <a href="jubilations/<%= jubilee.id %>/down"><i class="fa fa-arrow-down "></i></a>
+      </div>
+    </div>
+  <% end %> 
+</div>
+
   <div class="lesser_container">
+    <% votes = @image.vote_score %>
+    <% votes = "#{@image.vote_score}" if @image.vote_score.to_s.length == 1 %>
     <div class="image_arrows">
       <div class="arrows up">
         <a href="/images/<%= @image.id %>/up"><i class="fa fa-arrow-up"></i></a>
