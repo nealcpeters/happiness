@@ -4,6 +4,7 @@ Happiness::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'images#index'
+  post '/images/create', to: 'images#create'
   get '/images/:id/up', to: 'images#up'
   get '/images/:id/down', to: 'images#down'
 

@@ -15,10 +15,14 @@
       </div>
     </div>
 
-
     <div class="image_container">
       <%= image_tag(@image.path) %>
     </div>
+
+    <%= form_tag("/images/create", method: :post) do %>
+      <%= text_field_tag :path, nil, size: 50, placeholder: "Add a Photo of your Own!" %><br>  
+      <%= submit_tag("Submit Happiness", id: "submit", class: "button")%><br>
+    <% end %>
   </div>
 </div>
 
