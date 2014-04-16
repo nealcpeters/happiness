@@ -3,6 +3,11 @@ class ImagesController < ApplicationController
 		@image = Image.all.sample
 	end
 
+  def create
+    Image.create(path: params[:path])
+    redirect_to root_path
+  end
+
   def up
     upvote = Image.find(params[:id])
     upvote.update_attributes(up: upvote.up + 1)
