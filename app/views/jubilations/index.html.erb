@@ -2,7 +2,7 @@
 
   <%= form_for Jubilation.create do |f| %>
     <%= f.text_field :content %>
-    <%= f.submit %>
+    <%= f.submit class: "button"%>
   <% end %>
 
   <% @jubilations.each do |jubilee| %>
