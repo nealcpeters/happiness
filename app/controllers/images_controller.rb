@@ -17,6 +17,7 @@ class ImagesController < ApplicationController
 
   def down
     downvote = downvote.find(params[:id])
+    Vote.create(votable_id: downvote.id, votable_type: "image", ip_address: request.remote_ip)
     downvote.update_attributes(down: downvote.down + 1)
     redirect_to root_path
   end
