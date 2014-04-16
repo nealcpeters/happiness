@@ -16,6 +16,9 @@
     </div>
 
     <div class="image_container">
+      <%= form_tag("/", method: :get) do %>      
+        <%= submit_tag("Show Me More!", id: "submit", class: "button")%>
+      <% end %>  
       <%= image_tag(@image.path) %>
     </div>
 
