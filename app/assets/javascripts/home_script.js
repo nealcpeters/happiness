@@ -3,7 +3,7 @@ $(function(){
     e.preventDefault();
     data = {jubilation: {content: $('#jubilation_content').val()}}
     $.post("/jubilations", data, function(reply){
-      console.log(reply)
+      $('#jub-container').html(reply)
     })
   })
 })
