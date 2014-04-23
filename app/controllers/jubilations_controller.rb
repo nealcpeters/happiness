@@ -6,7 +6,11 @@ class JubilationsController < ApplicationController
 
   def create
     Jubilation.create(jubilation_params.merge(up: 0, down: 0))
-    redirect_to jubilations_path
+    if xhr?
+      
+    else  
+      redirect_to jubilations_path
+    end
   end
 
   def up
