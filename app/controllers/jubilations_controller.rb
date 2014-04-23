@@ -25,10 +25,12 @@ class JubilationsController < ApplicationController
   end
 
   def down
+    puts "-------=========---------====="
+    puts "argh"
     jubilee = Jubilation.find(params[:id])
     new_vote = Vote.new(votable_id: jubilee.id, votable_type: "jubilation", ip_address: request.remote_ip)
     if new_vote.save
-      jubilee.update_attributes(up: jubilee.down + 1)
+      jubilee.update_attributes(down: jubilee.down + 1)
     end
     redirect_to jubilations_path
   end

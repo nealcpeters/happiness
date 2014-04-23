@@ -8,7 +8,7 @@ $(function(){
     });
   });
 
-  $(document).on('click', '.jub-arrow', function(e){
+  $('body').on('click', '.jub-arrow', function(e){
     e.preventDefault();
     url = this.href;
     $.get(url, function(reply){
