@@ -2,15 +2,17 @@ class JubilationsController < ApplicationController
 
   def index
     @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    if request.xhr?
+      render("_jubilations")
+    else 
+      @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    end
+
   end
 
   def create
     Jubilation.create(jubilation_params.merge(up: 0, down: 0))
-    if xhr?
-      
-    else  
-      redirect_to jubilations_path
-    end
+    redirect_to jubilations_path
   end
 
   def up

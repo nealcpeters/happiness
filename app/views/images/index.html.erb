@@ -7,20 +7,21 @@
     <%= f.text_field :content %>
     <%= f.submit class: "button", :id => "jub-submit"%>
   <% end %>
-
-  <% @jubilations.each do |jubilee| %>
-    <div>      
-      <div class="arrows up">
-        <a href="/jubilations/<%= jubilee.id %>/up"><i class="fa fa-arrow-up"></i></a>
+  <div id="jub-container">
+    <% @jubilations.each do |jubilee| %>
+      <div>      
+        <div class="arrows up">
+          <a href="/jubilations/<%= jubilee.id %>/up"><i class="fa fa-arrow-up"></i></a>
+        </div>
+        <% votes = jubilee.vote_score %>
+        <% votes = " #{jubilee.vote_score}" if jubilee.vote_score.to_s.length == 1 %>
+        <p><span><%= votes %></span> &nbsp &nbsp <%= jubilee.content %> </p>
+        <div class="arrows down">
+          <a href="jubilations/<%= jubilee.id %>/down"><i class="fa fa-arrow-down "></i></a>
+        </div>
       </div>
-      <% votes = jubilee.vote_score %>
-      <% votes = " #{jubilee.vote_score}" if jubilee.vote_score.to_s.length == 1 %>
-      <p><span><%= votes %></span> &nbsp &nbsp <%= jubilee.content %> </p>
-      <div class="arrows down">
-        <a href="jubilations/<%= jubilee.id %>/down"><i class="fa fa-arrow-down "></i></a>
-      </div>
-    </div>
-  <% end %> 
+    <% end %> 
+  </div>
 </div>
 
   <div class="lesser_container">
