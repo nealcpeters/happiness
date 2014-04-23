@@ -25,8 +25,6 @@ class JubilationsController < ApplicationController
   end
 
   def down
-    puts "-------=========---------====="
-    puts "argh"
     jubilee = Jubilation.find(params[:id])
     new_vote = Vote.new(votable_id: jubilee.id, votable_type: "jubilation", ip_address: request.remote_ip)
     if new_vote.save
