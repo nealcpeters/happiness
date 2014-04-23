@@ -1,7 +1,12 @@
 class ImagesController < ApplicationController
 	def index
-		@image = Image.all.sample
-    @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    @image = Image.all.sample
+    if request.xhr?
+		  reply = {path:@image.path}
+      render json: reply
+    else
+      @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    end
 	end
 
   def create

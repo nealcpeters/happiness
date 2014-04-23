@@ -17,7 +17,7 @@
     <% votes = "#{@image.vote_score}" if @image.vote_score.to_s.length == 1 %>
     <div class="image_arrows">
       <div class="arrows up">
-        <a href="/images/<%= @image.id %>/up"><i class="fa fa-arrow-up"></i></a>
+        <a class="img-arrow" href="/images/<%= @image.id %>/up"><i class="fa fa-arrow-up"></i></a>
       </div>
       <p><%= votes %> </p>
       <div class="arrows image_down">
@@ -27,9 +27,11 @@
 
     <div class="image_container">
       <%= form_tag("/", method: :get) do %>      
-        <%= submit_tag("Show Me More!", id: "submit", class: "button")%>
+        <%= submit_tag("Show Me More!", id: "img-more", class: "button")%>
       <% end %>  
-      <%= image_tag(@image.path) %>
+      <div id="inner_image_container">
+        <%= image_tag(@image.path) %>
+      </div>
     </div>
 
     <%= form_tag("/images/create", method: :post) do %>
