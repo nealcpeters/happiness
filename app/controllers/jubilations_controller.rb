@@ -2,6 +2,12 @@ class JubilationsController < ApplicationController
 
   def index
     @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    if request.xhr?
+      render partial: "jubilations"
+    else 
+      @jubilations = Jubilation.all.sort_by{|jubilee| -jubilee.vote_score}
+    end
+
   end
 
   def create
