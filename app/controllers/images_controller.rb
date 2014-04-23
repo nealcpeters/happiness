@@ -15,6 +15,7 @@ class ImagesController < ApplicationController
   end
 
   def up
+    puts "==================="
     upvote = Image.find(params[:id])
     new_vote = Vote.new(votable_id: upvote.id, votable_type: "image", ip_address: request.remote_ip)
     if new_vote.save
